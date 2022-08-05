@@ -116,7 +116,7 @@ const NavBar = () => {
                                     className="badge text-dark border border-dark rounded-circle"
                                     style={{ paddingBottom: '2px' }}
                                 >
-                                    {data.addToCart}
+                                    0
                                 </span>
                             </a>
                         </div>
