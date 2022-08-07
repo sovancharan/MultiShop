@@ -1,214 +1,230 @@
-
 {
-        "FerturedProduct":[
-                {
-                        "productId":"1",
-                        "productName":"Camera",
-                        "productImage":"/static/img/product-1.jpg",
-                        "productPrice":"123.00",
-                        "productRateing":"99"
-                },
-                {
-                    "productId": "2",
-                    "productName": "Tshirt",
-                    "productImage": "/static/img/product-2.jpg",
-                    "productPrice": "123.00",
-                    "productRateing": "99"
-                },
-                {
-                    "productId": "3",
-                    "productName": "Table Lamp",
-                    "productImage": "/static/img/product-3.jpg",
-                    "productPrice": "123.00",
-                    "productRateing": "99"
-                },
-                {
-                        "productId": "4",
-                    "productName": "Shoe",
-                    "productImage": "/static/img/product-4.jpg",
-                    "productPrice": "123.00",
-                    "productRateing": "99"    
-                },
-                {
-                    "productId": "5",
-                    "productName": "Drone",
-                    "productImage": "/static/img/product-5.jpg",
-                    "productPrice": "123.00",
-                    "productRateing": "99"
-                },
-                {
-                    "productId": "6",
-                    "productName": "Digital Watch",
-                    "productImage": "/static/img/product-6.jpg",
-                    "productPrice": "123.00",
-                    "productRateing": "99"
-                },
-                {
-                    "productId": "7",
-                    "productName": "Woman T-Shirt",
-                    "productImage": "/static/img/product-7.jpg",
-                    "productPrice": "123.00",
-                    "productRateing": "99"
-                },
-                {
-                    "productId": "8",
-                    "productName": "Cosmetics",
-                    "productImage": "/static/img/product-8.jpg",
-                    "productPrice": "123.00",
-                    "productRateing": "99"
-                }
-        ],     
-        "CATEGORIES":[
-            {
-                "categoriId": "1",
-                "categoriName": "Women Dress",
-                "categoriImage": "/static/img/cat-1.jpg",
-                "categoriProducts": "100"
-            },
-            {
-                "categoriId": "2",
-                "categoriName": "Camera",
-                "categoriImage": "/static/img/cat-2.jpg",
-                "categoriProducts": "100"
-            },
-            {
-                "categoriId": "3",
-                "categoriName": "Shoe",
-                "categoriImage": "/static/img/cat-3.jpg",
-                "categoriProducts": "100"
-            },
-            {
-                "categoriId": "4",
-                "categoriName": "Cosmetics",
-                "categoriImage": "/static/img/cat-4.jpg",
-                "categoriProducts": "100"
-            },
-            {
-                "categoriId": "5",
-                "categoriName": "Cosmetics",
-                "categoriImage": "/static/img/cat-4.jpg",
-                "categoriProducts": "100"
-            },
-            {
-                "categoriId": "6",
-                "categoriName": "Shoe",
-                "categoriImage": "/static/img/cat-3.jpg",
-                "categoriProducts": "100"
-            },
-            {
-                "categoriId": "7",
-                "categoriName": "Camera",
-                "categoriImage": "/static/img/cat-2.jpg",
-                "categoriProducts": "100"
-            },
-            {
-                "categoriId": "8",
-                "categoriName": "Women Dress",
-                "categoriImage": "/static/img/cat-1.jpg",
-                "categoriProducts": "100"
-            },
-            {
-                "categoriId": "9",
-                "categoriName": "Camera",
-                "categoriImage": "/static/img/cat-2.jpg",
-                "categoriProducts": "100"
-            },
-            {
-                "categoriId": "10",
-                "categoriName": "Women Dress",
-                "categoriImage": "/static/img/cat-1.jpg",
-                "categoriProducts": "100"
-            },
-            {
-                "categoriId": "11",
-                "categoriName": "Cosmetics",
-                "categoriImage": "/static/img/cat-4.jpg",
-                "categoriProducts": "100"
-            },
-            {
-                "categoriId": "6",
-                "categoriName": "Shoe",
-                "categoriImage": "/static/img/cat-3.jpg",
-                "categoriProducts": "100"
-            }
-        ],
-        "Offer":[
-                {
-                        "OfferId":"1",
-                        "OfferImg":"/static/img/offer-1.jpg",
-                        "SaveAmount":"20%",
-                        "offerDescription":"Special Offer"
-                },
-                   {
-                       "OfferId": "2",
-                       "OfferImg": "/static/img/offer-1.jpg",
-                       "SaveAmount": "20%",
-                       "offerDescription": "Special Offer"
-                   }
-        ],
-        "shopListProduct":[
-            {
-                "shopingProductId": "1",
-                "shopinigProductImg": "/static/img/product-1.jpg",
-                "shopingProductName": "Camera",
-                "shopingProductPrice": "123.00",
-                "shopingProductRateing": "99"
-            },
-            {
-                "shopingProductId": "2",
-                "shopinigProductImg": "/static/img/product-2.jpg",
-                "shopingProductName": "Shirt",
-                "shopingProductPrice": "123.00",
-                "shopingProductRateing": "99"
-            },
-            {
-                "shopingProductId": "3",
-                "shopinigProductImg": "/static/img/product-3.jpg",
-                "shopingProductName": "Lamp",
-                "shopingProductPrice": "123.00",
-                "shopingProductRateing": "99"
-            },
-            {
-                "shopingProductId": "4",
-                "shopinigProductImg": "/static/img/product-4.jpg",
-                "shopingProductName": "Shoe",
-                "shopingProductPrice": "123.00",
-                "shopingProductRateing": "99"
-            },
-            {
-                "shopingProductId": "5",
-                "shopinigProductImg": "/static/img/product-5.jpg",
-                "shopingProductName": "Drone",
-                "shopingProductPrice": "123.00",
-                "shopingProductRateing": "99"
-            },
-            {
-                "shopingProductId": "6",
-                "shopinigProductImg": "/static/img/product-6.jpg",
-                "shopingProductName": "Watch",
-                "shopingProductPrice": "123.00",
-                "shopingProductRateing": "99"
-            },
-            {
-                "shopingProductId": "7",
-                "shopinigProductImg": "/static/img/product-7.jpg",
-                "shopingProductName": "Women Shirt",
-                "shopingProductPrice": "123.00",
-                "shopingProductRateing": "99"
-            },
-            {
-                "shopingProductId": "8",
-                "shopinigProductImg": "/static/img/product-8.jpg",
-                "shopingProductName": "Cosmetics",
-                "shopingProductPrice": "123.00",
-                "shopingProductRateing": "99"
-            },
-            {
-                "shopingProductId": "9",
-                "shopinigProductImg": "/static/img/product-9.jpg",
-                "shopingProductName": "Chair",
-                "shopingProductPrice": "123.00",
-                "shopingProductRateing": "99"
-            }
-        ]
+    "FerturedProduct": [
+        {
+            "productId": "1",
+            "productName": "Camera",
+            "productImage": "/static/img/product-1.jpg",
+            "productPrice": "123.00",
+            "productRateing": "99",
+            "productQuantity": "0"
+        },
+        {
+            "productId": "2",
+            "productName": "Tshirt",
+            "productImage": "/static/img/product-2.jpg",
+            "productPrice": "123.00",
+            "productRateing": "99",
+            "productQuantity": "0"
+        },
+        {
+            "productId": "3",
+            "productName": "Table Lamp",
+            "productImage": "/static/img/product-3.jpg",
+            "productPrice": "123.00",
+            "productRateing": "99",
+            "productQuantity": "0"
+        },
+        {
+            "productId": "4",
+            "productName": "Shoe",
+            "productImage": "/static/img/product-4.jpg",
+            "productPrice": "123.00",
+            "productRateing": "99",
+            "productQuantity": "0"
+        },
+        {
+            "productId": "5",
+            "productName": "Drone",
+            "productImage": "/static/img/product-5.jpg",
+            "productPrice": "123.00",
+            "productRateing": "99",
+            "productQuantity": "0"
+        },
+        {
+            "productId": "6",
+            "productName": "Digital Watch",
+            "productImage": "/static/img/product-6.jpg",
+            "productPrice": "123.00",
+            "productRateing": "99",
+            "productQuantity": "0"
+        },
+        {
+            "productId": "7",
+            "productName": "Woman T-Shirt",
+            "productImage": "/static/img/product-7.jpg",
+            "productPrice": "123.00",
+            "productRateing": "99",
+            "productQuantity": "0"
+        },
+        {
+            "productId": "8",
+            "productName": "Cosmetics",
+            "productImage": "/static/img/product-8.jpg",
+            "productPrice": "123.00",
+            "productRateing": "99",
+            "productQuantity": "0"
+        }
+    ],
+    "CATEGORIES": [
+        {
+            "categoriId": "1",
+            "categoriName": "Women Dress",
+            "categoriImage": "/static/img/cat-1.jpg",
+            "categoriProducts": "100"
+        },
+        {
+            "categoriId": "2",
+            "categoriName": "Camera",
+            "categoriImage": "/static/img/cat-2.jpg",
+            "categoriProducts": "100"
+        },
+        {
+            "categoriId": "3",
+            "categoriName": "Shoe",
+            "categoriImage": "/static/img/cat-3.jpg",
+            "categoriProducts": "100"
+        },
+        {
+            "categoriId": "4",
+            "categoriName": "Cosmetics",
+            "categoriImage": "/static/img/cat-4.jpg",
+            "categoriProducts": "100"
+        },
+        {
+            "categoriId": "5",
+            "categoriName": "Cosmetics",
+            "categoriImage": "/static/img/cat-4.jpg",
+            "categoriProducts": "100"
+        },
+        {
+            "categoriId": "6",
+            "categoriName": "Shoe",
+            "categoriImage": "/static/img/cat-3.jpg",
+            "categoriProducts": "100"
+        },
+        {
+            "categoriId": "7",
+            "categoriName": "Camera",
+            "categoriImage": "/static/img/cat-2.jpg",
+            "categoriProducts": "100"
+        },
+        {
+            "categoriId": "8",
+            "categoriName": "Women Dress",
+            "categoriImage": "/static/img/cat-1.jpg",
+            "categoriProducts": "100"
+        },
+        {
+            "categoriId": "9",
+            "categoriName": "Camera",
+            "categoriImage": "/static/img/cat-2.jpg",
+            "categoriProducts": "100"
+        },
+        {
+            "categoriId": "10",
+            "categoriName": "Women Dress",
+            "categoriImage": "/static/img/cat-1.jpg",
+            "categoriProducts": "100"
+        },
+        {
+            "categoriId": "11",
+            "categoriName": "Cosmetics",
+            "categoriImage": "/static/img/cat-4.jpg",
+            "categoriProducts": "100"
+        },
+        {
+            "categoriId": "6",
+            "categoriName": "Shoe",
+            "categoriImage": "/static/img/cat-3.jpg",
+            "categoriProducts": "100"
+        }
+    ],
+    "Offer": [
+        {
+            "OfferId": "1",
+            "OfferImg": "/static/img/offer-1.jpg",
+            "SaveAmount": "20%",
+            "offerDescription": "Special Offer"
+        },
+        {
+            "OfferId": "2",
+            "OfferImg": "/static/img/offer-1.jpg",
+            "SaveAmount": "20%",
+            "offerDescription": "Special Offer"
+        }
+    ],
+    "shopListProduct": [
+        {
+            "shopingProductId": "1",
+            "shopinigProductImg": "/static/img/product-1.jpg",
+            "shopingProductName": "Camera",
+            "shopingProductPrice": "123.00",
+            "shopingProductRateing": "99",
+              "shopingProductQuantity": "0"
+        },
+        {
+            "shopingProductId": "2",
+            "shopinigProductImg": "/static/img/product-2.jpg",
+            "shopingProductName": "Shirt",
+            "shopingProductPrice": "123.00",
+            "shopingProductRateing": "99",
+            "shopingProductQuantity": "0"
+        },
+        {
+            "shopingProductId": "3",
+            "shopinigProductImg": "/static/img/product-3.jpg",
+            "shopingProductName": "Lamp",
+            "shopingProductPrice": "123.00",
+            "shopingProductRateing": "99",
+            "shopingProductQuantity": "0"
+        },
+        {
+            "shopingProductId": "4",
+            "shopinigProductImg": "/static/img/product-4.jpg",
+            "shopingProductName": "Shoe",
+            "shopingProductPrice": "123.00",
+            "shopingProductRateing": "99",
+            "shopingProductQuantity": "0"
+        },
+        {
+            "shopingProductId": "5",
+            "shopinigProductImg": "/static/img/product-5.jpg",
+            "shopingProductName": "Drone",
+            "shopingProductPrice": "123.00",
+            "shopingProductRateing": "99",
+            "shopingProductQuantity": "0"
+        },
+        {
+            "shopingProductId": "6",
+            "shopinigProductImg": "/static/img/product-6.jpg",
+            "shopingProductName": "Watch",
+            "shopingProductPrice": "123.00",
+            "shopingProductRateing": "99",
+            "shopingProductQuantity": "0"
+        },
+        {
+            "shopingProductId": "7",
+            "shopinigProductImg": "/static/img/product-7.jpg",
+            "shopingProductName": "Women Shirt",
+            "shopingProductPrice": "123.00",
+            "shopingProductRateing": "99",
+            "shopingProductQuantity": "0"
+        },
+        {
+            "shopingProductId": "8",
+            "shopinigProductImg": "/static/img/product-8.jpg",
+            "shopingProductName": "Cosmetics",
+            "shopingProductPrice": "123.00",
+            "shopingProductRateing": "99",
+            "shopingProductQuantity": "0"
+        },
+        {
+            "shopingProductId": "9",
+            "shopinigProductImg": "/static/img/product-9.jpg",
+            "shopingProductName": "Chair",
+            "shopingProductPrice": "123.00",
+            "shopingProductRateing": "99",
+            "shopingProductQuantity": "0"
+        }
+    ]
 }

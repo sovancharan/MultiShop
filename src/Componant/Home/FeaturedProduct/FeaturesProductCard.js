@@ -1,24 +1,30 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart, addToWishlist } from '../../../Rdux/Action/Action';
+import { Link } from 'react-router-dom';
 
 const FeaturesProductCard = ({ product }) => {
-    // useEffect(() => {
-    //     const data = useSelector((state) => state.ActionReducer.list);
-    //     console.log('data', data.addToCart);
-    // }, [data])
 
-    const data = useSelector((state) => state.ActionReducer.list);
+        
+    
     const dispatch = useDispatch();
 
     const cart = () => {
-        dispatch(addToCart());
-        console.log('Cart', data);
+        dispatch(
+            addToCart(
+                product.productId,
+                product.productName,
+                product.productImage,
+                product.productPrice,
+                product.productRateing,
+                product.productQuantity
+            )
+        );
+      
     };
-    const wishList=()=>{
-        dispatch(addToWishlist())
-        console.log("WishList",data);
-    }
+    const wishList = () => {
+        dispatch(addToWishlist());
+    };
 
     return (
         <>
@@ -31,17 +37,20 @@ const FeaturesProductCard = ({ product }) => {
                         alt=""
                     />
                     <div className="product-action">
-                        <a
+                        <Link
                             className="btn btn-outline-dark btn-square"
+                            to="/"
                             onClick={cart}
                         >
                             <i className="fa fa-shopping-cart"></i>
-                        </a>
-                        <a className="btn btn-outline-dark btn-square" 
-                        onClick={wishList}
+                        </Link>
+                        <Link
+                            className="btn btn-outline-dark btn-square"
+                            to="/"
+                            onClick={wishList}
                         >
                             <i className="far fa-heart"></i>
-                        </a>
+                        </Link>
                         <a className="btn btn-outline-dark btn-square" href="/">
                             <i className="fa fa-sync-alt"></i>
                         </a>

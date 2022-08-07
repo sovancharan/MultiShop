@@ -1,6 +1,18 @@
 import React from 'react';
+import { useSelector } from 'react-redux/es/exports';
+import CartCard from './CartCard';
 
 const Cart = () => {
+    const data = useSelector((state) => state.ActionReducer);
+    const subTotal = () => {
+        let subTotalData = 0;
+        data.products.map((item) => {
+            subTotalData +=
+                parseInt(item.productPrice) * parseInt(item.productQuantity);
+        });
+        return subTotalData;
+    };
+
     return (
         <div>
             {/* <!-- Cart Start --> */}
@@ -18,201 +30,13 @@ const Cart = () => {
                                 </tr>
                             </thead>
                             <tbody className="align-middle">
-                                <tr>
-                                    <td className="align-middle">
-                                        <img
-                                            src="/static/img/product-1.jpg"
-                                            alt=""
-                                            style={{ width: '50px' }}
-                                        />{' '}
-                                        Product Name
-                                    </td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle">
-                                        <div
-                                            className="input-group quantity mx-auto"
-                                            style={{ width: '100px' }}
-                                        >
-                                            <div className="input-group-btn">
-                                                <button className="btn btn-sm btn-primary btn-minus">
-                                                    <i className="fa fa-minus"></i>
-                                                </button>
-                                            </div>
-                                            <input
-                                                type="text"
-                                                className="form-control form-control-sm bg-secondary border-0 text-center"
-                                                value="1"
-                                            />
-                                            <div className="input-group-btn">
-                                                <button className="btn btn-sm btn-primary btn-plus">
-                                                    <i className="fa fa-plus"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle">
-                                        <button className="btn btn-sm btn-danger">
-                                            <i className="fa fa-times"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="align-middle">
-                                        <img
-                                            src="/static/img/product-2.jpg"
-                                            alt=""
-                                            style={{ width: '50px' }}
-                                        />{' '}
-                                        Product Name
-                                    </td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle">
-                                        <div
-                                            className="input-group quantity mx-auto"
-                                            style={{ width: '100px' }}
-                                        >
-                                            <div className="input-group-btn">
-                                                <button className="btn btn-sm btn-primary btn-minus">
-                                                    <i className="fa fa-minus"></i>
-                                                </button>
-                                            </div>
-                                            <input
-                                                type="text"
-                                                className="form-control form-control-sm bg-secondary border-0 text-center"
-                                                value="1"
-                                            />
-                                            <div className="input-group-btn">
-                                                <button className="btn btn-sm btn-primary btn-plus">
-                                                    <i className="fa fa-plus"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle">
-                                        <button className="btn btn-sm btn-danger">
-                                            <i className="fa fa-times"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="align-middle">
-                                        <img
-                                            src="/static/img/product-3.jpg"
-                                            alt=""
-                                            style={{ width: '50px' }}
-                                        />{' '}
-                                        Product Name
-                                    </td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle">
-                                        <div
-                                            className="input-group quantity mx-auto"
-                                            style={{ width: '100px' }}
-                                        >
-                                            <div className="input-group-btn">
-                                                <button className="btn btn-sm btn-primary btn-minus">
-                                                    <i className="fa fa-minus"></i>
-                                                </button>
-                                            </div>
-                                            <input
-                                                type="text"
-                                                className="form-control form-control-sm bg-secondary border-0 text-center"
-                                                value="1"
-                                            />
-                                            <div className="input-group-btn">
-                                                <button className="btn btn-sm btn-primary btn-plus">
-                                                    <i className="fa fa-plus"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle">
-                                        <button className="btn btn-sm btn-danger">
-                                            <i className="fa fa-times"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="align-middle">
-                                        <img
-                                            src="img/product-4.jpg"
-                                            alt=""
-                                            style={{ width: '50px' }}
-                                        />{' '}
-                                        Product Name
-                                    </td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle">
-                                        <div
-                                            className="input-group quantity mx-auto"
-                                            style={{ width: '100px' }}
-                                        >
-                                            <div className="input-group-btn">
-                                                <button className="btn btn-sm btn-primary btn-minus">
-                                                    <i className="fa fa-minus"></i>
-                                                </button>
-                                            </div>
-                                            <input
-                                                type="text"
-                                                className="form-control form-control-sm bg-secondary border-0 text-center"
-                                                value="1"
-                                            />
-                                            <div className="input-group-btn">
-                                                <button className="btn btn-sm btn-primary btn-plus">
-                                                    <i className="fa fa-plus"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle">
-                                        <button className="btn btn-sm btn-danger">
-                                            <i className="fa fa-times"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="align-middle">
-                                        <img
-                                            src="img/product-5.jpg"
-                                            alt=""
-                                            style={{ width: '50px' }}
-                                        />{' '}
-                                        Product Name
-                                    </td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle">
-                                        <div
-                                            className="input-group quantity mx-auto"
-                                            style={{ width: '100px' }}
-                                        >
-                                            <div className="input-group-btn">
-                                                <button className="btn btn-sm btn-primary btn-minus">
-                                                    <i className="fa fa-minus"></i>
-                                                </button>
-                                            </div>
-                                            <input
-                                                type="text"
-                                                className="form-control form-control-sm bg-secondary border-0 text-center"
-                                                value="1"
-                                            />
-                                            <div className="input-group-btn">
-                                                <button className="btn btn-sm btn-primary btn-plus">
-                                                    <i className="fa fa-plus"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle">
-                                        <button className="btn btn-sm btn-danger">
-                                            <i className="fa fa-times"></i>
-                                        </button>
-                                    </td>
-                                </tr>
+                                {data.products.map((item, index) => {
+                                    return (
+                                        <tr key={index}>
+                                            <CartCard cartData={item} />
+                                        </tr>
+                                    );
+                                })}
                             </tbody>
                         </table>
                     </div>
@@ -240,7 +64,7 @@ const Cart = () => {
                             <div className="border-bottom pb-2">
                                 <div className="d-flex justify-content-between mb-3">
                                     <h6>Subtotal</h6>
-                                    <h6>$150</h6>
+                                    <h6>${subTotal()}</h6>
                                 </div>
                                 <div className="d-flex justify-content-between">
                                     <h6 className="font-weight-medium">
@@ -252,7 +76,7 @@ const Cart = () => {
                             <div className="pt-2">
                                 <div className="d-flex justify-content-between mt-2">
                                     <h5>Total</h5>
-                                    <h5>$160</h5>
+                                    <h5>${subTotal() + 10}</h5>
                                 </div>
                                 <button className="btn btn-block btn-primary font-weight-bold my-3 py-3">
                                     Proceed To Checkout

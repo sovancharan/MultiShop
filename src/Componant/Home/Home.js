@@ -7,19 +7,23 @@ import Footer from './Footer/Footer';
 import Header from './Header/Header';
 import NavBar from './Navbar/NavBar';
 import Offer from './Offer/Offer';
+import { useSelector } from 'react-redux/es/exports';
 
 const Home = () => {
+
+        const data=useSelector((state)=>state)
+
     return (
         <div>
-            <NavBar />
+            <NavBar data={data} />
             <Header />
             <Featured />
             <Categories />
             <FeaturedProduct />
             <Offer />
             <FeaturedProduct />
-            <ProductCarasol/>
-            <Footer/>
+            <ProductCarasol />
+            <Footer />
         </div>
     );
 };

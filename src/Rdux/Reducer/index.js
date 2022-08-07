@@ -1,9 +1,8 @@
-import { combineReducers } from "redux";
-import ActionReducer from "./ActionReducer";
+import { combineReducers } from 'redux';
+import ActionReducer from './ActionReducer';
 
-
-const rootReducer=combineReducers({
-       ActionReducer 
-})
+const rootReducer = combineReducers({
+    ActionReducer,
+});
 
 export default rootReducer;

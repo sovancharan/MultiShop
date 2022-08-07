@@ -5,14 +5,7 @@ import { useSelector } from 'react-redux';
 
 const NavBar = () => {
     const data = useSelector((state) => state.ActionReducer.list);
-    console.log(data);
-    //     const [cartData, setCardData] = useState(data.addToCart);
 
-    useEffect(() => {
-        console.log('set');
-    });
-
-    //     console.log('jffjhwhw', data);
     return (
         <div>
             {/* <!-- Topbar Start --> */}
@@ -316,7 +309,7 @@ const NavBar = () => {
                                             {data.addToWishlist}
                                         </span>
                                     </a>
-                                    <a href="/" className="btn px-0 ml-3">
+                                    <Link to="/cart" className="btn px-0 ml-3">
                                         <i className="fas fa-shopping-cart text-primary"></i>
                                         <span
                                             className="badge text-secondary border border-secondary rounded-circle"
@@ -325,7 +318,7 @@ const NavBar = () => {
                                             {data.addToCart}
                                             {/* {console.log({data.addToCart})} */}
                                         </span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </nav>

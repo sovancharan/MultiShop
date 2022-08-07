@@ -1,6 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { addToCart, addToWishlist } from '../../../Rdux/Action/Action';
+import { useDispatch } from 'react-redux/es/exports';
 
 const CardItem = ({ shopListProduct }) => {
+    const dispatch = useDispatch();
+
+    const cart = () => {
+        console.log(shopListProduct);
+        dispatch(
+            addToCart(
+                shopListProduct.shopingProductId,
+
+                shopListProduct.shopingProductName,
+                shopListProduct.shopinigProductImg,
+
+                shopListProduct.shopingProductPrice,
+                shopListProduct.shopingProductRateing,
+                shopListProduct.shopingProductQuantity
+            )
+        );
+    };
+    const wishList = () => {
+        dispatch(addToWishlist());
+    };
     return (
         <>
             {/* <div className="col-lg-4 col-md-6 col-sm-6 pb-1"> */}
@@ -12,12 +35,20 @@ const CardItem = ({ shopListProduct }) => {
                         alt=""
                     />
                     <div className="product-action">
-                        <a className="btn btn-outline-dark btn-square" href="/">
+                        <Link
+                            className="btn btn-outline-dark btn-square"
+                            onClick={cart}
+                            to=""
+                        >
                             <i className="fa fa-shopping-cart"></i>
-                        </a>
-                        <a className="btn btn-outline-dark btn-square" href="/">
+                        </Link>
+                        <Link
+                            className="btn btn-outline-dark btn-square"
+                            to=""
+                            onClick={wishList}
+                        >
                             <i className="far fa-heart"></i>
-                        </a>
+                        </Link>
                         <a className="btn btn-outline-dark btn-square" href="/">
                             <i className="fa fa-sync-alt"></i>
                         </a>
@@ -36,7 +67,7 @@ const CardItem = ({ shopListProduct }) => {
                     <div className="d-flex align-items-center justify-content-center mt-2">
                         <h5>{shopListProduct.shopingProductPrice}</h5>
                         <h6 className="text-muted ml-2">
-                            <del>$123.00</del>
+                            <del>$123</del>
                         </h6>
                     </div>
                     <div className="d-flex align-items-center justify-content-center mb-1">
