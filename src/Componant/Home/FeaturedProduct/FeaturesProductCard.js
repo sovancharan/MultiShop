@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart, addToWishlist } from '../../../Rdux/Action/Action';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 const FeaturesProductCard = ({ product }) => {
-
-        
-    
     const dispatch = useDispatch();
 
     const cart = () => {
@@ -20,8 +20,8 @@ const FeaturesProductCard = ({ product }) => {
                 product.productQuantity
             )
         );
-      
     };
+
     const wishList = () => {
         dispatch(addToWishlist());
     };

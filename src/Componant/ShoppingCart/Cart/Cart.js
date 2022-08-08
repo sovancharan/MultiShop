@@ -1,9 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux/es/exports';
 import CartCard from './CartCard';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
     const data = useSelector((state) => state.ActionReducer);
+
     const subTotal = () => {
         let subTotalData = 0;
         data.products.map((item) => {
@@ -70,17 +72,26 @@ const Cart = () => {
                                     <h6 className="font-weight-medium">
                                         Shipping
                                     </h6>
-                                    <h6 className="font-weight-medium">$10</h6>
+                                    <h6 className="font-weight-medium">
+                                        ${data.products.length === 0 ? 0 : 10}
+                                    </h6>
                                 </div>
                             </div>
                             <div className="pt-2">
                                 <div className="d-flex justify-content-between mt-2">
                                     <h5>Total</h5>
-                                    <h5>${subTotal() + 10}</h5>
+                                    <h5>
+                                        $
+                                        {data.products.length === 0
+                                            ? 0
+                                            : subTotal() + 10}
+                                    </h5>
                                 </div>
-                                <button className="btn btn-block btn-primary font-weight-bold my-3 py-3">
-                                    Proceed To Checkout
-                                </button>
+                                <Link to="/checkout">
+                                    <button className="btn btn-block btn-primary font-weight-bold my-3 py-3">
+                                        Proceed To Checkout
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

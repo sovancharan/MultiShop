@@ -3,7 +3,7 @@ import { Dropdown, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-const NavBar = () => {
+const NavBar = ({ navbarData }) => {
     const data = useSelector((state) => state.ActionReducer.list);
 
     return (

@@ -27,8 +27,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="price-all"
-                                      
+                                        htmlFor="price-all"
                                     >
                                         All Price
                                     </label>
@@ -44,7 +43,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="price-1"
+                                        htmlFor="price-1"
                                     >
                                         $0 - $100
                                     </label>
@@ -60,7 +59,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="price-2"
+                                        htmlFor="price-2"
                                     >
                                         $100 - $200
                                     </label>
@@ -76,7 +75,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="price-3"
+                                        htmlFor="price-3"
                                     >
                                         $200 - $300
                                     </label>
@@ -92,7 +91,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="price-4"
+                                        htmlFor="price-4"
                                     >
                                         $300 - $400
                                     </label>
@@ -108,7 +107,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="price-5"
+                                        htmlFor="price-5"
                                     >
                                         $400 - $500
                                     </label>
@@ -137,7 +136,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="price-all"
+                                        htmlFor="price-all"
                                     >
                                         All Color
                                     </label>
@@ -153,7 +152,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="color-1"
+                                        htmlFor="color-1"
                                     >
                                         Black
                                     </label>
@@ -169,7 +168,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="color-2"
+                                        htmlFor="color-2"
                                     >
                                         White
                                     </label>
@@ -185,7 +184,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="color-3"
+                                        htmlFor="color-3"
                                     >
                                         Red
                                     </label>
@@ -201,7 +200,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="color-4"
+                                        htmlFor="color-4"
                                     >
                                         Blue
                                     </label>
@@ -217,7 +216,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="color-5"
+                                        htmlFor="color-5"
                                     >
                                         Green
                                     </label>
@@ -246,7 +245,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="size-all"
+                                        htmlFor="size-all"
                                     >
                                         All Size
                                     </label>
@@ -262,7 +261,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="size-1"
+                                        htmlFor="size-1"
                                     >
                                         XS
                                     </label>
@@ -278,7 +277,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="size-2"
+                                        htmlFor="size-2"
                                     >
                                         S
                                     </label>
@@ -294,7 +293,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="size-3"
+                                        htmlFor="size-3"
                                     >
                                         M
                                     </label>
@@ -310,7 +309,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="size-4"
+                                        htmlFor="size-4"
                                     >
                                         L
                                     </label>
@@ -326,7 +325,7 @@ const Items = () => {
                                     />
                                     <label
                                         className="custom-control-label"
-                                        for="size-5"
+                                        htmlFor="size-5"
                                     >
                                         XL
                                     </label>
@@ -417,7 +416,10 @@ const Items = () => {
                             </div>
                             {ProductData.shopListProduct.map((item, index) => {
                                 return (
-                                    <div className="col-lg-4 col-md-6 col-sm-6 pb-1 " key={index}>
+                                    <div
+                                        className="col-lg-4 col-md-6 col-sm-6 pb-1 "
+                                        key={index}
+                                    >
                                         <CardItem shopListProduct={item} />;
                                     </div>
                                 );

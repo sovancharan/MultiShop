@@ -10,12 +10,13 @@ import Offer from './Offer/Offer';
 import { useSelector } from 'react-redux/es/exports';
 
 const Home = () => {
+    const data = useSelector((state) => state.ActionReducer);
 
-        const data=useSelector((state)=>state)
+    console.log('home', data);
 
     return (
         <div>
-            <NavBar data={data} />
+            <NavBar navbarData={data} />
             <Header />
             <Featured />
             <Categories />

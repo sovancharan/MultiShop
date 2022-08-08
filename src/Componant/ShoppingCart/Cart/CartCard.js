@@ -1,17 +1,19 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { decBtnA, incBtnA } from '../../../Rdux/Action/Action';
+import { decBtnA, incBtnA, removeItemsA } from '../../../Rdux/Action/Action';
 
 const CartCard = ({ cartData }) => {
     const dispatch = useDispatch();
-    
 
     const IncBtn = () => {
         dispatch(incBtnA(cartData.productId));
     };
-    const decBtn=()=>{
+    const decBtn = () => {
         dispatch(decBtnA(cartData.productId));
-    }
+    };
+    const removeItems = () => {
+        dispatch(removeItemsA(cartData.productId));
+    };
     const Total = () => {
         return parseInt(cartData.productPrice) * cartData.productQuantity;
     };
@@ -57,7 +59,7 @@ const CartCard = ({ cartData }) => {
             </td>
             <td className="align-middle">${Total()}</td>
             <td className="align-middle">
-                <button className="btn btn-sm btn-danger">
+                <button className="btn btn-sm btn-danger" onClick={removeItems}>
                     <i className="fa fa-times"></i>
                 </button>
             </td>

@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Checkout from './Componant/Checkout/Checkout';
@@ -11,25 +12,20 @@ import ShopDetails from './Componant/ShopDetails/ShopDetails';
 import ShoppingCart from './Componant/ShoppingCart/ShoppingCart';
 
 function App() {
+    const data = useSelector((state) => state.ActionReducer);
     return (
         <div className="App">
-            {/* <Home /> */}
-            {/* <ContactUs/> */}
-            {/* <Shop/> */}
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Home data={data} />} />
 
                     <Route path="/shop" element={<Shop />} />
                     <Route path="/contactUs" element={<ContactUs />} />
                     <Route path="/cart" element={<ShoppingCart />} />
                     <Route path="/checkout" element={<Checkout />} />
-                    <Route path="/shopDetails" element={<ShopDetails/>} />
+                    <Route path="/shopDetails" element={<ShopDetails />} />
                 </Routes>
             </BrowserRouter>
-
-           
-        
         </div>
     );
 }

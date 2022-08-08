@@ -45,3 +45,11 @@ export const decBtnA=(id,data)=>{
             },
         };
 }
+export const removeItemsA =(id)=>{
+        return {
+                type:"REMOVE_ITEMS",
+                payload:{
+                        id:id
+                }
+        }
+}
