@@ -13,7 +13,7 @@ const Header = () => {
                             className="carousel slide carousel-fade mb-30 mb-lg-0"
                             data-ride="carousel"
                         >
-                            <ol className="carousel-indicators">
+                            {/* <ol className="carousel-indicators">
                                 <li
                                     data-target="#header-carousel"
                                     data-slide-to="0"
@@ -27,7 +27,7 @@ const Header = () => {
                                     data-target="#header-carousel"
                                     data-slide-to="2"
                                 ></li>
-                            </ol>
+                            </ol> */}
                             <div className="carousel-inner">
                                 {/* <div
                                     className="carousel-item position-relative active"

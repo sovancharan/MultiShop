@@ -9,14 +9,14 @@ const HeaderCarasol = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // autoplay: true,
+        autoplay: true,
     };
 
     return (
         <Slider {...settings}>
             <div>
                 <div
-                    className="carousel-item position-relative active"
+                    className=" position-relative active"
                     style={{ height: '430px' }}
                 >
                     <img
@@ -46,10 +46,7 @@ const HeaderCarasol = () => {
                 </div>
             </div>
             <div>
-                <div
-                    className="carousel-item position-relative"
-                    style={{ height: '430px' }}
-                >
+                <div className=" position-relative" style={{ height: '430px' }}>
                     <img
                         className="position-absolute w-100 h-100"
                         src="/static/img/carousel-2.jpg"
@@ -77,10 +74,7 @@ const HeaderCarasol = () => {
                 </div>
             </div>
             <div>
-                <div
-                    className="carousel-item position-relative"
-                    style={{ height: '430px' }}
-                >
+                <div className=" position-relative" style={{ height: '430px' }}>
                     <img
                         className="position-absolute w-100 h-100"
                         src="/static/img/carousel-3.jpg"
