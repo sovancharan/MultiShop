@@ -1,4 +1,5 @@
 import React from 'react';
+import HeaderCarasol from '../Carasol/HeaderCarasol';
 
 const Header = () => {
     return (
@@ -28,7 +29,7 @@ const Header = () => {
                                 ></li>
                             </ol>
                             <div className="carousel-inner">
-                                <div
+                                {/* <div
                                     className="carousel-item position-relative active"
                                     style={{ height: '430px' }}
                                 >
@@ -126,7 +127,8 @@ const Header = () => {
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
+                                <HeaderCarasol/>
                             </div>
                         </div>
                     </div>

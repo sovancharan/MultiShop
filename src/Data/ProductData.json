@@ -160,7 +160,7 @@
             "shopingProductName": "Camera",
             "shopingProductPrice": "123.00",
             "shopingProductRateing": "99",
-              "shopingProductQuantity": "0"
+            "shopingProductQuantity": "0"
         },
         {
             "shopingProductId": "2",
@@ -226,5 +226,20 @@
             "shopingProductRateing": "99",
             "shopingProductQuantity": "0"
         }
-    ]
+    ],
+    "orderDetails": 
+        {
+            "First_Name": "",
+            "Last_Name": "",
+            "Email": "",
+            "Mobile_Number": 0,
+            "Address_Line1": "",
+            "Address_Line2": "",
+            "City": "",
+            "State": "",
+            "Zip_Code": 0,
+            "Total_Amount": 0,
+            "country": ""
+        }
+    
 }

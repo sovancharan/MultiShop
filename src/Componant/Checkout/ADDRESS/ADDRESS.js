@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import AddressCard from './AddressCard';
-
+import ShippingDifferentAddress from './ShippingDifferentAddress';
+import orderDetails from '../../../Data/ProductData.json';
 function ADDRESS() {
     const fName = useRef();
     const lName = useRef();
@@ -12,8 +13,18 @@ function ADDRESS() {
     const city = useRef();
     const state = useRef();
     const zipCode = useRef();
+    const country = useRef();
+    const shippingDifferentAddress = useRef();
     const data = useSelector((state) => state.ActionReducer.products);
-
+    const [checkValue, setCheckValue] = useState(false);
+    const shipping = () => {
+        if(checkValue===false){
+                 setCheckValue(true);
+        }
+        else
+        setCheckValue(false)
+       
+    };
     const subTotal = () => {
         let subTotalData = 0;
 
@@ -23,16 +34,20 @@ function ADDRESS() {
         return subTotalData;
     };
     const placeOrder = () => {
-        console.log(`First Name: ${fName.current.value}`);
-        console.log(`Last Name: ${lName.current.value}`);
-        console.log(`Email: ${email.current.value}`);
-        console.log(`Mobile Number: ${mNumber.current.value}`);
-        console.log(`Address Line1: ${A1.current.value}`);
-        console.log(`Address Line2 : ${A2.current.value}`);
-        console.log(`City: ${city.current.value}`);
-        console.log(`State: ${state.current.value}`);
-        console.log(`Zip Code: ${zipCode.current.value}`);
-        console.log(`Total Amount: ${data.length === 0 ? 0 : subTotal() + 10}`);
+        orderDetails.orderDetails.First_Name = fName.current.value;
+        orderDetails.orderDetails.Last_Name = lName.current.value;
+        orderDetails.orderDetails.Email = email.current.value;
+        orderDetails.orderDetails.Mobile_Number = mNumber.current.value;
+        orderDetails.orderDetails.Address_Line1 = A1.current.value;
+        orderDetails.orderDetails.Address_Line2 = A2.current.value;
+        orderDetails.orderDetails.country = country.current.value;
+        orderDetails.orderDetails.City = city.current.value;
+        orderDetails.orderDetails.State = state.current.value;
+        orderDetails.orderDetails.Zip_Code = zipCode.current.value;
+        orderDetails.orderDetails.Total_Amount =
+            data.length === 0 ? 0 : subTotal() + 10;
+
+        console.log(orderDetails.orderDetails);
     };
 
     return (
@@ -61,7 +76,7 @@ function ADDRESS() {
                                     <label>Last Name</label>
                                     <input
                                         className="form-control"
-                                        type="text"
+                                        type="email"
                                         placeholder="Enter your last name"
                                         ref={lName}
                                     />
@@ -79,7 +94,7 @@ function ADDRESS() {
                                     <label>Mobile No</label>
                                     <input
                                         className="form-control"
-                                        type="text"
+                                        type="number"
                                         placeholder="enter your mobile number"
                                         ref={mNumber}
                                     />
@@ -108,6 +123,7 @@ function ADDRESS() {
                                     <select
                                         className="custom-select"
                                         name="Country"
+                                        ref={country}
                                     >
                                         <option value="india">India</option>
                                         <option value="Afganistan">
@@ -139,7 +155,7 @@ function ADDRESS() {
                                     <label>ZIP Code</label>
                                     <input
                                         className="form-control"
-                                        type="text"
+                                        type="number"
                                         placeholder="Enter your zip code"
                                         ref={zipCode}
                                     />
@@ -165,12 +181,12 @@ function ADDRESS() {
                                             type="checkbox"
                                             className="custom-control-input"
                                             id="shipto"
+                                            ref={shippingDifferentAddress}
+                                            onClick={shipping}
                                         />
                                         <label
                                             className="custom-control-label"
                                             htmlFor="shipto"
-                                            data-toggle="collapse"
-                                            data-target="#shipping-address"
                                         >
                                             Ship to different address
                                         </label>
@@ -178,7 +194,9 @@ function ADDRESS() {
                                 </div>
                             </div>
                         </div>
-                        <div className="collapse mb-5" id="shipping-address">
+
+                        {checkValue === true && <ShippingDifferentAddress />}
+                        {/* <div className="collapse mb-5" id="shipping-address">
                             <h5 className="section-title position-relative text-uppercase mb-3">
                                 <span className="bg-secondary pr-3">
                                     Shipping Address
@@ -271,7 +289,7 @@ function ADDRESS() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="col-lg-4">
                         <h5 className="section-title position-relative text-uppercase mb-3">

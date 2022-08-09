@@ -106,7 +106,7 @@ const ProductDescription = () => {
                                 1 review for "Product Name"
                             </h4>
                             <div className="media mb-4">
-                                <img
+                                <image
                                     src="/static/img/user.jpg"
                                     alt="Image"
                                     className="img-fluid mr-3 mt-1"
