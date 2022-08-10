@@ -15,9 +15,6 @@ const initialData = {
 const ActionReducer = (state = initialData, action) => {
     switch (action.type) {
         case 'ADDTOCART':
-            
-            
-
             const {
                 productId,
 
@@ -34,10 +31,10 @@ const ActionReducer = (state = initialData, action) => {
                 if (item.productId === productId) return true;
             });
 
-            if(newArr){
-                return{
-                ...state,
-                }
+            if (newArr) {
+                return {
+                    ...state,
+                };
             }
             state.list.addToCart += 1;
             toast.success('Item Add to Cart');
@@ -83,10 +80,6 @@ const ActionReducer = (state = initialData, action) => {
                 },
             };
         case 'DECBTN':
-        //     if (state.list.addToCart > 1) state.list.addToCart -= 1;
-        //     else if (state.list.addToCart === 1) {
-        //         toast.error("You Can't Decriment More");
-        //     }
             state.products.map((item) => {
                 if (item.productId === action.payload.id) {
                     if (item.productQuantity > 1) {

@@ -15,7 +15,7 @@ const Contact = () => {
                             <form
                                 name="sentMessage"
                                 id="contactForm"
-                                novalidate="novalidate"
+                                // novalidate="novalidate"
                             >
                                 <div className="control-group">
                                     <input
