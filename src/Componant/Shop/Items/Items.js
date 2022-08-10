@@ -420,7 +420,7 @@ const Items = () => {
                                         className="col-lg-4 col-md-6 col-sm-6 pb-1 "
                                         key={index}
                                     >
-                                        <CardItem shopListProduct={item} />;
+                                        <CardItem shopListProduct={item} />
                                     </div>
                                 );
                             })}
