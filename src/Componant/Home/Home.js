@@ -12,7 +12,7 @@ import { useSelector } from 'react-redux/es/exports';
 const Home = () => {
     const data = useSelector((state) => state.ActionReducer);
 
-    console.log('home', data);
+
 
     return (
         <div>

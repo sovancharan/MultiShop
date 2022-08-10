@@ -1,7 +1,23 @@
 import React from 'react';
+import { decBtnA, incBtnA, removeItemsA } from '../../../Rdux/Action/Action';
 import ProductCarasol from '../Carasol/ProductCarasol';
 
-const Details = () => {
+const Details = ({ details }) => {
+        // console.log("de",details);
+//     const dispatch = useDispatch();
+
+//     const IncBtn = () => {
+//         dispatch(incBtnA(cartData.productId));
+//     };
+//     const decBtn = () => {
+//         dispatch(decBtnA(cartData.productId));
+//     };
+//     const removeItems = () => {
+//         dispatch(removeItemsA(cartData.productId));
+//     };
+//     const Total = () => {
+//         return parseInt(cartData.productPrice) * cartData.productQuantity;
+//     };
     return (
         <div>
             {/* <!-- Shop Detail Start --> */}

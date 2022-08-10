@@ -15,8 +15,8 @@ const initialData = {
 const ActionReducer = (state = initialData, action) => {
     switch (action.type) {
         case 'ADDTOCART':
-            state.list.addToCart += 1;
-            toast.success('Item Add to Cart');
+            
+            
 
             const {
                 productId,
@@ -28,6 +28,19 @@ const ActionReducer = (state = initialData, action) => {
                 productQuantity,
             } = action.payload;
 
+            console.log(productId);
+
+            let newArr = state.products.find((item) => {
+                if (item.productId === productId) return true;
+            });
+
+            if(newArr){
+                return{
+                ...state,
+                }
+            }
+            state.list.addToCart += 1;
+            toast.success('Item Add to Cart');
             return {
                 ...state,
                 products: [
@@ -90,12 +103,14 @@ const ActionReducer = (state = initialData, action) => {
                 },
             };
         case 'REMOVE_ITEMS':
-            if (state.list.addToCart > 1) {
-                state.list.addToCart -= 1;
-            }
-            const newItems = state.products.filter(
-                (items) => items.productId !== action.payload.id
-            );
+            const newItems = state.products.filter((items) => {
+                return items.productId !== action.payload.id;
+            });
+            state.products.map((item) => {
+                if (item.productId === action.payload.id) {
+                    state.list.addToCart -= item.productQuantity;
+                }
+            });
 
             return {
                 ...state,

@@ -7,7 +7,7 @@ const CardItem = ({ shopListProduct }) => {
     const dispatch = useDispatch();
 
     const cart = () => {
-        console.log(shopListProduct);
+        // console.log(shopListProduct);
         dispatch(
             addToCart(
                 shopListProduct.shopingProductId,
