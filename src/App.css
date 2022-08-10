@@ -163,6 +163,13 @@ a {
   background-color: transparent;
 }
 
+.navSpan2{
+        background-color: #FFD333 !important;
+}
+.navSpan1{
+        color: #FFD333 !important;
+}
+
 a:hover {
   color: #e6b400;
   text-decoration: underline;

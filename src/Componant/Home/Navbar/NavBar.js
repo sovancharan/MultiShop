@@ -118,10 +118,10 @@ const NavBar = ({ navbarData }) => {
                 <div className="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
                     <div className="col-lg-4">
                         <a href="/" className="text-decoration-none">
-                            <span className="h1 text-uppercase text-primary bg-dark px-2">
+                            <span className="h1 text-uppercase  bg-dark px-2 navSpan1">
                                 Multi
                             </span>
-                            <span className="h1 text-uppercase text-dark bg-primary px-2 ml-n1">
+                            <span className="h1 text-uppercase text-dark px-2 ml-n1 navSpan2">
                                 Shop
                             </span>
                         </a>
@@ -155,7 +155,7 @@ const NavBar = ({ navbarData }) => {
                 <div className="row px-xl-5">
                     <div className="col-lg-3 d-none d-lg-block">
                         <a
-                            className="btn d-flex align-items-center justify-content-between bg-primary w-100"
+                            className="btn d-flex align-items-center justify-content-between navSpan2 w-100"
                             data-toggle="collapse"
                             href="#navbar-vertical"
                             style={{ height: '65px', padding: '0 30px' }}

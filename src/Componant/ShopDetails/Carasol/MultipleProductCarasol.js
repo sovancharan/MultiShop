@@ -1,21 +1,33 @@
-import React from 'react'
+import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Container } from 'react-bootstrap';
+// import CarasolData from '../../../Data/ProductData.json';
+import MultipleProductcarasolComponant from './MultipleProductcarasolComponant';
 
-const MultipleProductCarasol = () => {
-          var settings = {
+const MultipleProductCarasol = ({ multipleProduct }) => {
+    var settings = {
         //       dots: true,
-              infinite: true,
-              speed: 500,
-              slidesToShow: 4,
-              slidesToScroll: 3,
-          };
-  return (
-      <Container className='pt-5 g-0'>
-          <Slider {...settings}>
-              <div>
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 3,
+    };
+    return (
+        <Container className="pt-5 g-0">
+            <Slider {...settings}>
+                {multipleProduct.FerturedProduct.map((item, index) => {
+                    return (
+                        <div key={index}>
+                            <MultipleProductcarasolComponant
+                                productData={item}
+                            />
+                        </div>
+                    );
+                })}
+
+                {/* <div>
                   <div class="product-item bg-light">
                       <div class="product-img position-relative overflow-hidden">
                           <img
@@ -73,8 +85,8 @@ const MultipleProductCarasol = () => {
                           </div>
                       </div>
                   </div>
-              </div>
-              <div>
+              </div> */}
+                {/* <div>
                   <div class="product-item bg-light">
                       <div class="product-img position-relative overflow-hidden">
                           <img
@@ -132,8 +144,8 @@ const MultipleProductCarasol = () => {
                           </div>
                       </div>
                   </div>
-              </div>
-              <div>
+              </div> */}
+                {/* <div>
                   <div class="product-item bg-light">
                       <div class="product-img position-relative overflow-hidden">
                           <img
@@ -191,8 +203,8 @@ const MultipleProductCarasol = () => {
                           </div>
                       </div>
                   </div>
-              </div>
-              <div>
+              </div> */}
+                {/* <div>
                   <div class="product-item bg-light">
                       <div class="product-img position-relative overflow-hidden">
                           <img
@@ -250,8 +262,8 @@ const MultipleProductCarasol = () => {
                           </div>
                       </div>
                   </div>
-              </div>
-              <div>
+              </div> */}
+                {/* <div>
                   <div class="product-item bg-light">
                       <div class="product-img position-relative overflow-hidden">
                           <img
@@ -309,10 +321,10 @@ const MultipleProductCarasol = () => {
                           </div>
                       </div>
                   </div>
-              </div>
-          </Slider>
-      </Container>
-  );
-}
+              </div> */}
+            </Slider>
+        </Container>
+    );
+};
 
-export default MultipleProductCarasol
+export default MultipleProductCarasol;

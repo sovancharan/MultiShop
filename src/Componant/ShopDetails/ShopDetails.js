@@ -10,16 +10,16 @@ import Data from "../../Data/ProductData.json"
 
 const ShopDetails = () => {
   return (
-    <div>
-        <NavBar/>
-        <Breadcrumb/>
-        <Details details={Data} />
-        <ProductDescription/>
+      <div>
+          <NavBar />
+          <Breadcrumb />
+          <Details details={Data} />
+          <ProductDescription />
 
-        <MultipleProductCarasol/>
-        <Footer/>
-    </div>
-  )
+          <MultipleProductCarasol multipleProduct={Data} />
+          <Footer />
+      </div>
+  );
 }
 
 export default ShopDetails

@@ -3,21 +3,21 @@ import { decBtnA, incBtnA, removeItemsA } from '../../../Rdux/Action/Action';
 import ProductCarasol from '../Carasol/ProductCarasol';
 
 const Details = ({ details }) => {
-        // console.log("de",details);
-//     const dispatch = useDispatch();
+    // console.log("de",details);
+    //     const dispatch = useDispatch();
 
-//     const IncBtn = () => {
-//         dispatch(incBtnA(cartData.productId));
-//     };
-//     const decBtn = () => {
-//         dispatch(decBtnA(cartData.productId));
-//     };
-//     const removeItems = () => {
-//         dispatch(removeItemsA(cartData.productId));
-//     };
-//     const Total = () => {
-//         return parseInt(cartData.productPrice) * cartData.productQuantity;
-//     };
+    //     const IncBtn = () => {
+    //         dispatch(incBtnA(cartData.productId));
+    //     };
+    //     const decBtn = () => {
+    //         dispatch(decBtnA(cartData.productId));
+    //     };
+    //     const removeItems = () => {
+    //         dispatch(removeItemsA(cartData.productId));
+    //     };
+    //     const Total = () => {
+    //         return parseInt(cartData.productPrice) * cartData.productQuantity;
+    //     };
     return (
         <div>
             {/* <!-- Shop Detail Start --> */}
@@ -63,7 +63,7 @@ const Details = ({ details }) => {
                                         />
                                         <label
                                             className="custom-control-label"
-                                            for="size-1"
+                                            //     htmlFor="size-1"
                                         >
                                             XS
                                         </label>
@@ -77,7 +77,7 @@ const Details = ({ details }) => {
                                         />
                                         <label
                                             className="custom-control-label"
-                                            for="size-2"
+                                            htmlFor="size-2"
                                         >
                                             S
                                         </label>
@@ -91,7 +91,7 @@ const Details = ({ details }) => {
                                         />
                                         <label
                                             className="custom-control-label"
-                                            for="size-3"
+                                            htmlFor="size-3"
                                         >
                                             M
                                         </label>
@@ -105,7 +105,7 @@ const Details = ({ details }) => {
                                         />
                                         <label
                                             className="custom-control-label"
-                                            for="size-4"
+                                            htmlFor="size-4"
                                         >
                                             L
                                         </label>
@@ -119,7 +119,7 @@ const Details = ({ details }) => {
                                         />
                                         <label
                                             className="custom-control-label"
-                                            for="size-5"
+                                            htmlFor="size-5"
                                         >
                                             XL
                                         </label>
@@ -140,7 +140,7 @@ const Details = ({ details }) => {
                                         />
                                         <label
                                             className="custom-control-label"
-                                            for="color-1"
+                                            htmlFor="color-1"
                                         >
                                             Black
                                         </label>
@@ -154,7 +154,7 @@ const Details = ({ details }) => {
                                         />
                                         <label
                                             className="custom-control-label"
-                                            for="color-2"
+                                            htmlFor="color-2"
                                         >
                                             White
                                         </label>
@@ -168,7 +168,7 @@ const Details = ({ details }) => {
                                         />
                                         <label
                                             className="custom-control-label"
-                                            for="color-3"
+                                            htmlFor="color-3"
                                         >
                                             Red
                                         </label>
@@ -182,7 +182,7 @@ const Details = ({ details }) => {
                                         />
                                         <label
                                             className="custom-control-label"
-                                            for="color-4"
+                                            htmlFor="color-4"
                                         >
                                             Blue
                                         </label>
@@ -196,7 +196,7 @@ const Details = ({ details }) => {
                                         />
                                         <label
                                             className="custom-control-label"
-                                            for="color-5"
+                                            htmlFor="color-5"
                                         >
                                             Green
                                         </label>
@@ -216,7 +216,7 @@ const Details = ({ details }) => {
                                     <input
                                         type="text"
                                         className="form-control bg-secondary border-0 text-center"
-                                        value="1"
+                                        defaultValue="1"
                                     />
                                     <div className="input-group-btn">
                                         <button className="btn btn-primary btn-plus">

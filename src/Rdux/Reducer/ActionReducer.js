@@ -83,10 +83,10 @@ const ActionReducer = (state = initialData, action) => {
                 },
             };
         case 'DECBTN':
-            if (state.list.addToCart > 1) state.list.addToCart -= 1;
-            else if (state.list.addToCart === 1) {
-                toast.error("You Can't Decriment More");
-            }
+        //     if (state.list.addToCart > 1) state.list.addToCart -= 1;
+        //     else if (state.list.addToCart === 1) {
+        //         toast.error("You Can't Decriment More");
+        //     }
             state.products.map((item) => {
                 if (item.productId === action.payload.id) {
                     if (item.productQuantity > 1) {

@@ -106,9 +106,9 @@ const ProductDescription = () => {
                                 1 review for "Product Name"
                             </h4>
                             <div className="media mb-4">
-                                <image
+                                <img
                                     src="/static/img/user.jpg"
-                                    alt="Image"
+                                    alt=""
                                     className="img-fluid mr-3 mt-1"
                                     style={{ width: '45px' }}
                                 />
@@ -154,7 +154,9 @@ const ProductDescription = () => {
                             </div>
                             <form>
                                 <div className="form-group">
-                                    <label for="message">Your Review *</label>
+                                    <label htmlFor="message">
+                                        Your Review *
+                                    </label>
                                     <textarea
                                         id="message"
                                         cols="30"
@@ -163,7 +165,7 @@ const ProductDescription = () => {
                                     ></textarea>
                                 </div>
                                 <div className="form-group">
-                                    <label for="name">Your Name *</label>
+                                    <label htmlFor="name">Your Name *</label>
                                     <input
                                         type="text"
                                         className="form-control"
@@ -171,7 +173,7 @@ const ProductDescription = () => {
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label for="email">Your Email *</label>
+                                    <label htmlFor="email">Your Email *</label>
                                     <input
                                         type="email"
                                         className="form-control"
